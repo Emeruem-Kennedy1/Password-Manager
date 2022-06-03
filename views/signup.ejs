@@ -1,0 +1,81 @@
+<%- include ('./partials/header') %> 
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden">
+  
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+      <div class="row gx-lg-5 align-items-center mb-5">
+        <div class="col-lg-6 mb-5 mb-lg-0 " style="z-index: 10">
+          <h1 class="my-5 display-5 fw-bold ls-tight primary-text">
+            The Password Manager <br />
+            <span>for your passwords</span>
+          </h1>
+          <p class="mb-4 opacity-70 secondary-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Temporibus, expedita iusto veniam atque, magni tempora mollitia
+            dolorum consequatur nulla, neque debitis eos reprehenderit quasi
+            ab ipsum nisi dolorem modi. Quos?
+          </p>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+  
+          <div class="card bg-glass">
+            <div class="card-body px-4 py-5 px-md-5">
+
+              <form method="post" action="/signup">
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-floating form-outline mb-3">
+                      <input type="text" id="form3Example1" class="form-control" required placeholder="FIrstName" name="firstName" />
+                      <label class="form-label" for="form3Example1">First name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-floating mb-3">
+                      <input type="text" id="form3Example2" class="form-control" required placeholder="LastName" name="lastName" />
+                      <label for="form3Example2">Last name</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Email input -->
+                <div class=" form-floating form-outline mb-4">
+                  <input type="email" id="form3Example3" class="form-control" placeholder="name@example.com" required name="email"/>
+                  <label class="form-label" for="form3Example3">Email address</label>
+                </div>
+  
+                <!-- Password input -->
+                <div class="form-floating form-outline mb-4">
+                  <input type="password" id="form3Example4" class="form-control" placeholder="Password" name="password" />
+                  <label class="form-label" for="form3Example4">Password</label>
+                </div>
+                <div class="form-floating form-outline mb-4">
+                  <input type="password" id="form3Example4" class="form-control" placeholder="Password" name="confirmPassword"/>
+                  <label class="form-label" for="form3Example4">Confirm Password</label>
+                </div>
+
+  
+
+                <div class="d-grid col-6 mx-auto">
+                  <button class="btn btn-primary" type="submit">Sign Up</button>
+                </div>
+
+                
+  
+              </form>
+
+              <div class="text-center m-4">
+                <p>Already have an account? <a href="/login" class="link-primary">Login</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+
+<%- include ('./partials/footer') %> 

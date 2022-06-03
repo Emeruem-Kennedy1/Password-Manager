@@ -1,0 +1,51 @@
+.background-radial-gradient {
+  background-color: #282244;
+}
+
+.bg-glass {
+  background-color: hsla(0, 0%, 100%, 0.9) !important;
+  backdrop-filter: saturate(200%) blur(25px);
+  }
+
+  @media screen and (min-width: 992px) {
+    section{
+      height: 100vh;
+    }
+  }
+  
+input :focus {
+    border:1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+  }
+  .form-control:focus {
+    border-color: #40b59b;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #40b59b;
+}
+.btn-primary{
+  background-color: #40b59b;
+  border-color: #40b59b;
+}
+.btn-primary:hover{
+  background-color: #40b59cb0;
+  border-color: #40b59cb8;
+}
+.btn-primary:focus{
+  background-color: #40b59cb0;
+  border-color: #40b59cb8;
+}
+.primary-text{
+  color: #40b59b;
+}
+.secondary-text{
+  color: #fff;
+}
+form{
+  color: rgb(87, 87, 87);
+}
+.link-primary{
+  color: #40b59b;
+  text-decoration: none;
+}
+.link-primary:hover{
+  color: #40b59cb0;
+}
