@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+     <!--font awesome-->
+     <script src="https://kit.fontawesome.com/5f6946aa21.js" crossorigin="anonymous"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+     <!--css stylesheet-->
+     <link rel="stylesheet" href="dashboard.css">
+
+     <!--JS files-->
+     <script src ="dashboard.js" charset="UTF-8" defer></script>
+
+    
+
+    <title>Document</title>
+</head>
+<body>
+    <section id = "header">
+        <nav class="navbar navbar-expand-sm bg-light" id="navigation-bar">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-01 h2" id="logo">Password Locket</span>
+
+                <div class="navbar-headers container justify-content-center">
+                    <ul class="navbar-nav flex-fill w-100 flex-nowrap">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Socials</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Wallets</a>
+                      </li>
+                      <li class="nav-item subs">
+                        <a class="nav-link">Subscriptions</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="navbar-headers_2 container justify-content-center">
+                    <ul class="navbar-nav flex-fill w-100 flex-nowrap">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-bookmark"> </i>
+                                <span class ="label">Favorites</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-user">
+                            </i>
+                            <span class ="label" >Profile</span>     
+                        </a>
+                      </li>
+                    
+                    </ul>
+                  </div>
+                
+            </div>
+        </nav>
+
+    </section>
+
+    <section id="password_cards">
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card mb-3 w-55" >
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-square-instagram"></i></i>  INSTAGRAM</h5>
+                  <p class ="username-input"><span class="username-header">USERNAME:</span><span class="username">lewiskyron1</span></p>
+                 <form class="form_div ">
+                  <div class="mb-3 ">
+                    <label for="password " class="password-label ">PASSWORD:  <span class="password_hidden">*********</span> </label>
+                    
+                  </div>
+                  <a href="#" class="btn btn-primary" id="password_reveal">Show</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-3 w-55">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-facebook"></i>  FACEBOOK</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card mb-3 w-55">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-twitter"></i>  SNAPCHAT</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+            </div>
+
+            <div class="col">
+              <div class="card mb-3 w-55">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-tiktok"></i>  TIKTOK</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+            </div>
+            
+            <div class="col">
+              <div class="card mb-3 w-55">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-discord"></i>  DISCORD</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+            </div>
+
+            <div class="col">
+              <div class="card mb-3 w-55">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-linkedin"></i>  LINKEDIN</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+            </div>
+
+            <div class="col">
+              <div class="card mb-3 w-55">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-pinterest"></i> PINTREST</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+            </div>
+
+            <div class="col">
+              <div class="card mb-3 w-55">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-amazon"></i> AMAZON</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+            </div>
+
+            <div class="col">
+              <div class="card mb-3 w-55">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-apple"></i> APPLE ID</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+            </div>
+ 
+            <div class="col">
+              <div class="card mb-3 w-55">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-github"></i> GITHUB</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+            </div>
+
+            <div class="col">
+              <div class="card mb-3 w-55">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-google"></i> GMAIL</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+            </div>
+
+            <div class="col">
+              <div class="card mb-3 w-55">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-slack"></i>  SLACK</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+            </div>
+        </div> 
+    </section>
+    
+
+    <script src ="dashboard.js" charset="UTF-8" defer></script>
+</body>
+</html>
