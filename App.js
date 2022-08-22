@@ -6,6 +6,7 @@ const flash = require('express-flash');
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
+const {checkAuthenticated, checkNotAuthenticated} = require('./auth/checkAuthenticated');
 
 
 const app = exppress();
@@ -39,7 +40,7 @@ app.use('/dashboard', dashboardRoutes);
 app.set('view engine', 'ejs');
 
 
-app.get('/', (req, res) => {
+app.get('/',checkNotAuthenticated, (req, res) => {
     res.render('signup',{message: null});
 })
 
