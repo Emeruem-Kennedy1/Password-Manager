@@ -1,60 +1,140 @@
-#navigation-bar{
-    padding-top:1.5%;
-    padding-bottom: 1.5%;
-    padding-left:1%;
-    padding-right: 1%;
-}
-.navbar-links{
-    display:inline-block;
-    text-align: center;
+/*BODY -STYLING */
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing:border-box;
 }
 
-.nav-item{
-    text-align: center;
-    color: black;
-    box-shadow: inset 0 0 0 0  ;
-    transition: ease-out 0.3s;
+/* NAV-BAR STYLING */
+nav{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    min-height: 13vh;
+    padding-top: 0.8%;
 }
 
-.nav-item:hover{
-    box-shadow: inset 100px 0 0 0  #898AA6;
-}
-
-.subs:hover{
-    box-shadow: inset 112px 0 0 0  #898AA6;
-} 
-
-.navbar-headers{
-    position: relative;
-    left:27%;
-}
-
-.navbar-headers_2{
-    position: relative;
-    left:30%;
-}
-
-.nav-item{
-    padding: 1%;
+.logo{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 5px;
+    padding-left: 0.5%;
     
 }
 
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 27%;
+    position: relative;
+    left: 52%
 
-.label{
-    font-size:small;
 }
 
+.nav-links li{
+    list-style: none;
+}
 
+.nav-item:hover{
+    box-shadow: inset 100px 0 0 0 #256D85;
+}
+.nav-links a{
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color:black;
+    
+}
 
+.burger{
+    display: None; 
+}
+
+.burger div{
+    width:25px;
+    height:3px;
+    background-color: black;
+    font-size:14px;
+    margin: 5px;
+
+}
+
+@media screen and (max-width:1090px) {
+    .nav-links{
+        left:45%;
+        width:35%;
+    }
+}
+@media screen and (max-width:1050px) {
+    .nav-links{
+        left:35%;
+        width:35%;
+    }
+}
+@media screen and (max-width:768px){
+    body{
+        overflow-x:hidden;
+    }
+    .nav-links{
+       right:0px;
+       height:70vh;
+       left:65%;
+       top:11vh;
+       position:absolute;
+       z-index: 10000;
+       background-color:#D3D3D3;
+       display:flex;
+       flex-direction:column; 
+       justify-content: space-evenly;
+       align-items: center;
+       padding-right: 2%;
+       transform: translateX(100%);
+       transition: transform 0.5s ease-in; 
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .burger{
+        display:block;
+        cursor:pointer;
+        position:relative;
+        left:45%;
+        padding-bottom:2%;
+    }
+
+}
+
+.nav-active{
+    transform: translateX(0%);
+
+}
+@keyframes navLinksFade{
+    from{
+        opacity:0;
+        transform:translateX(100px);     
+    }
+
+    to{
+        opacity: 1;
+        transform:translateX(0px);
+    }
+}
+/* CARDS STYLING*/
 #password_cards{
     background-color:#D3D3D3;
     padding-top: 5%;
     padding-left: 1%;
     padding-right: 1%;
     padding-bottom: 5%;
-
 }
 
+
+#pass_cards{
+    box-shadow:20px 20px 10px #898B8A;
+}
 .row{
     padding-left:5%;
     padding-right: 5%;
@@ -65,8 +145,12 @@
     transition: background-color 1s ease-out 50ms;
 }
 
-.card:hover{
-    background-color:  #898AA6;
+.btn{
+    background-color:#256D85 ;
+    color:white;
+}
+.btn:hover{
+    background-color:#035397;
 }
 
 .username-input{
@@ -88,7 +172,6 @@
 .password_hidden{
     font-style:italic;
     font-weight: 900;
-    position:absolute;
     padding-top:1%;
     padding-left: 2%;
 }
@@ -104,3 +187,4 @@
 .password_font{
     padding-top:0;
 }
+
