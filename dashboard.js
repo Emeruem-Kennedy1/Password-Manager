@@ -10,7 +10,7 @@ pass.addEventListener("click",function(){
 const navSlide = () =>{
     const burger =document.querySelector(".burger");
     const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll(".nav-links li a");
+    const navLinks = document.querySelectorAll(".nav-item");
     
 
     burger.addEventListener("click", ()=>{
@@ -20,7 +20,7 @@ const navSlide = () =>{
             if(link.style.animation){
                 link.style.animation = '';
             }else{
-            link.style.animation = `navLinkFade 0.2s ease forwards ${index / 7 + 0.3 }s`;
+            link.style.animation = `navLinksFade 0.2s ease forwards ${index / 7 + 0.3 }s`;
             }
         });
     });    

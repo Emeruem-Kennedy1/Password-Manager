@@ -16,9 +16,9 @@ nav{
 }
 
 .logo{
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 1.5px;
-    font-size: 5px;
+    font-size:xx-large;
     padding-left: 0.5%;
     
 }
@@ -28,27 +28,38 @@ nav{
     justify-content: space-around;
     width: 27%;
     position: relative;
-    left: 52%
-
+    left: 57%
 }
 
 .nav-links li{
     list-style: none;
 }
 
+.nav-links li i{
+    color:rgb(94, 91, 91);
+}
+
+
+
+.nav-item{
+    padding:3%;
+    box-shadow: inset 0 0 0 0  ;
+    transition: ease-in 0.3s;
+    align-items: center;
+}
 .nav-item:hover{
-    box-shadow: inset 100px 0 0 0 #256D85;
+    box-shadow: inset 101px 0 0 0 #256D85;
 }
 .nav-links a{
     text-decoration: none;
     letter-spacing: 2px;
-    font-size: 14px;
-    color:black;
-    
+    font-size: 12px;
+    color:grey;
 }
 
 .burger{
-    display: None; 
+    display: None;
+    padding-left: 17%;
 }
 
 .burger div{
@@ -58,6 +69,18 @@ nav{
     font-size:14px;
     margin: 5px;
 
+}
+
+@media screen and (max-width: 610px){
+    .burger{
+        padding-left: 10%;
+    }
+}
+
+@media screen and (max-width: 515px){
+    .burger{
+        padding-left: 5%;
+    }
 }
 
 @media screen and (max-width:1090px) {
