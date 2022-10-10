@@ -7,6 +7,7 @@ const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
 const {checkAuthenticated, checkNotAuthenticated} = require('./auth/checkAuthenticated');
+const {fetch} = require('node-fetch');
 
 
 const app = exppress();
