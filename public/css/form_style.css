@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+body{
+  font-family: 'Didact Gothic', sans-serif;
+}
 .background-radial-gradient {
   background-color: #282244;
 }
@@ -8,7 +12,7 @@
   }
 
   @media screen and (min-width: 992px) {
-    section{
+    #login-signup{
       height: 100vh;
     }
   }
