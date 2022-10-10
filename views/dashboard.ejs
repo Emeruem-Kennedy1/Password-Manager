@@ -1,69 +1,72 @@
 <%- include ('./partials/header') -%> 
 <body>
     <section id = "header">
-        <nav class="navbar navbar-expand-sm bg-light" id="navigation-bar">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-01 h2" id="logo">Password Locket</span>
 
-                  <div class="navbar-headers_2 container justify-content-center">
-                    <ul class="navbar-nav flex-fill w-100 flex-nowrap">
-                      <li class="nav-item">
+
+        <nav class="navbar bg-light px-5" id="navigation-bar">
+
+            <span class="navbar-brand mb-01 h2" id="logo">Password Locker</span>
+
+            <div class="" id="navbarText">
+                <ul class="navbar-nav flex-fill w-100 flex-nowrap">
+                    <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="fa-solid fa-bookmark"> </i>
-                                <span class ="label">Favorites</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fa-solid fa-user">
-                            </i>
-                            <span class ="label" >Profile</span>     
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            
                             <form action="/logout?_method=DELETE" method="POST">
                                 <button class="btn btn-primary" type="submit">Logout</button>
                             </form>
                         </a>
-                      </li>
-                    
-                    </ul>
-                  </div>
-                
+                    </li>
+                </ul>
             </div>
+
         </nav>
 
     </section>
 
-    <section id="password_cards">
 
-            
-                    
+    <section id="form" class="p-5">
+        <div class="container-fluid">
+            <h3>Save a new password</h3>
+            <form action="/dashboard" method="post">
+                <div class="form-group py-1">
+                    <label for="exampleInputEmail1">Username of Email Address</label>
+                    <input required type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username or email">
+                </div>
+                <div class="form-group py-1">Service Name</label>
+                    <input required type="text" name="serviceName" class="form-control" id="exampleInputPassword1" placeholder="service name eg. gmail">
+                </div>
+                <div class="form-group py-1">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input required type="text" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary my-2">Submit</button>
+            </form>
+        </div>
         
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <% services.forEach((service) => { %>
-                <div class="col">
-                    <div class="card mb-3 w-55" >
-                        <div class="card-body">
-                        <h5 class="card-title"><i class="fa-brands fa-<%= service.brandname %> "></i></i><%= service.serviceName %> </h5>
-                        <p class ="username-input"><span class="username-header">Username:</span><%= service.username %><span class="username"></span></p>
-                        <div class="mb-3 ">
-                            <label for="password " class="password-label ">Password:  <span class="password_font"><%= service.password %></span> </label>
+    </section>
 
-                        </div>
-                        <a href="#" class="btn btn-primary" id="password_reveal">Show</a>
-                        </div>
+
+    <section id="password_cards" class="mx-5">
+        <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-center">
+            <% services.forEach((service) => { %>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-brands fa-<%= service.brandname %> "></i></i><%= service.serviceName %> </h5>
+                        <p class ="username-input"><span class="username-header">Username: </span><%= service.username %><span class="username"></span></p>
+                        <p for="password" class="password-label">Password: <span class="password_font"><%= service.password %></span> </p>
+                        <p class="fake-password">Password: ********** </p>
+                        <button class="btn btn-primary" id="show-button" >Show</button>
                     </div>
                 </div>
+            </div>
             <% }); %>
         </div> 
+    </div>
         
-               
     </section>
-    
 
-    <script src ="dashboard.js" charset="UTF-8" defer></script>
+    <script src ='/scripts/scripts.js' charset="UTF-8"defer></script>
 </body>
 </html>
