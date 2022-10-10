@@ -2,6 +2,7 @@ const LocalStrategy = require('passport-local').Strategy
 const {findUsers, findUserDetails} = require('./authentication.js');
 const bcrypt = require('bcrypt')
 const md5 = require('md5');
+const cookieParser = require('cookie-parser');
 
 
 
@@ -11,7 +12,6 @@ function initialize(passport) {
         const usersEmailId = await findUsers();
         const userEmailId = usersEmailId.data.find(userEmailid => userEmailid === md5(emailId));
 
-        // console.log(userEmailId);
         if (userEmailId == null) {
             return done(null, false, {message: 'Incorrect email address'});
         }
@@ -21,6 +21,7 @@ function initialize(passport) {
             bcrypt.compare(password, user.data.password, (err, isMatch) => {
                 if (err) throw err;
                 if (isMatch) {
+                    // cookieParser('user',user.data);
                     return done(null, user);
                 } else {
                     return done(null, false, {message: 'Password incorrect'});
