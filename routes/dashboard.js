@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+const {fetch} = import('node-fetch');
 const exppress = require('express');
 const router = exppress.Router();
 const {checkAuthenticated} = require('../auth/checkAuthenticated');

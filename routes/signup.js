@@ -4,7 +4,7 @@ const axios = require('axios');
 const {checkAuthenticated, checkNotAuthenticated} = require('../auth/checkAuthenticated');
 const {findUsers, findUserDetails} = require('../auth/authentication');
 const md5 = require('md5');
-
+const {fetch} = import('node-fetch');
 
 router.get('/',checkNotAuthenticated, (req, res) => {
     res.render('signup',{message: null});
