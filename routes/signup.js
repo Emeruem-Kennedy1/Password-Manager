@@ -10,7 +10,7 @@ router.get('/',checkNotAuthenticated, (req, res) => {
     res.render('signup',{message: null});
 })
 
-router.post('/', async (req, res) => {
+router.post('/', checkNotAuthenticated, async (req, res) => {
     const url = `${process.env.API_ENTRYPOINT}/${process.env.API_KEY}/users`;
     const user= {
         email: req.body.email,
