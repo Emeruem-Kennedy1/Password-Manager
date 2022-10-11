@@ -1,10 +1,10 @@
-const express = require('express');
+import express  from 'express';
 const router = express.Router();
-const axios = require('axios');
-const {checkAuthenticated, checkNotAuthenticated} = require('../auth/checkAuthenticated');
-const {findUsers, findUserDetails} = require('../auth/authentication');
-const md5 = require('md5');
-const {fetch} = import('node-fetch');
+import axios  from 'axios';
+import {checkAuthenticated, checkNotAuthenticated}  from '../auth/checkAuthenticated.js';
+import {findUsers, findUserDetails} from '../auth/authentication.js';
+import md5  from 'md5';
+import fetch from 'node-fetch';
 
 router.get('/',checkNotAuthenticated, (req, res) => {
     res.render('signup',{message: null});
@@ -43,7 +43,7 @@ router.post('/', checkNotAuthenticated, async (req, res) => {
 
 })
 
-module.exports = router;
+export default router;
 
 
 // Todo: write code to ensure that the password and the confirm password fields match

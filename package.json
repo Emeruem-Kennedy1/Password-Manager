@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is an application that helps you keep track of your password accross the web so you don't need to remeber them",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"

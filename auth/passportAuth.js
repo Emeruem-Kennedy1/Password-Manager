@@ -1,8 +1,8 @@
-const LocalStrategy = require('passport-local').Strategy
-const {findUsers, findUserDetails} = require('./authentication.js');
-const bcrypt = require('bcrypt')
-const md5 = require('md5');
-const cookieParser = require('cookie-parser');
+import {Strategy as LocalStrategy} from 'passport-local';
+import {findUsers, findUserDetails} from './authentication.js';
+import bcrypt from 'bcrypt';
+import md5 from 'md5'
+import cookieParser from 'cookie-parser';
 
 
 
@@ -46,4 +46,4 @@ function initialize(passport) {
 }
 
 
-module.exports = initialize
+export default initialize

@@ -1,9 +1,8 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const passport = require('passport');
-const passportLocal = require('passport-local').Strategy;
-const initializePassport = require('../auth/passportAuth');
-const {checkAuthenticated, checkNotAuthenticated} = require('../auth/checkAuthenticated');
+import passport from 'passport';
+import initializePassport from '../auth/passportAuth.js';
+import {checkAuthenticated, checkNotAuthenticated} from '../auth/checkAuthenticated.js';
 
 
 
@@ -21,5 +20,4 @@ router.post('/', passport.authenticate('local', {
     failureFlash: true
     })
 );
-
-module.exports = router;
+export default router;

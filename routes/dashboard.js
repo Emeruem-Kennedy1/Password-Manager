@@ -1,7 +1,7 @@
-const {fetch} = import('node-fetch');
-const exppress = require('express');
+import fetch from 'node-fetch';
+import exppress from 'express';
 const router = exppress.Router();
-const {checkAuthenticated} = require('../auth/checkAuthenticated');
+import {checkAuthenticated} from '../auth/checkAuthenticated.js';
 
 
 const findServices = async (emailID) =>{
@@ -37,4 +37,4 @@ router.post('/', checkAuthenticated, async (req, res) => {
 
 
 
-module.exports = router;
+export default router;

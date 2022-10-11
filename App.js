@@ -1,14 +1,15 @@
-const exppress = require('express');
-const bodyParser = require('body-parser');
-const mongooose = require('mongoose');
-const env = require('dotenv').config();
-const flash = require('express-flash');
-const session = require('express-session');
-const passport = require('passport');
-const methodOverride = require('method-override');
-const {checkAuthenticated, checkNotAuthenticated} = require('./auth/checkAuthenticated');
-const {fetch} = import('node-fetch');
+import exppress from 'express';
+import bodyParser from 'body-parser'
+import mongooose from 'mongoose'
+import  env from 'dotenv'
+import flash from 'express-flash';
+import session from 'express-session';
+import passport from 'passport';
+import  methodOverride from 'method-override';
+import {checkAuthenticated, checkNotAuthenticated} from './auth/checkAuthenticated.js';
+import fetch from 'node-fetch';
 
+env.config();
 
 const app = exppress();
 
@@ -27,9 +28,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 ////////////////Routes/////////////////////
-const loginRoutes = require('./routes/login');
-const signupRoutes = require('./routes/signup');
-const dashboardRoutes = require('./routes/dashboard');
+import loginRoutes from './routes/login.js';
+import signupRoutes from './routes/signup.js';
+import dashboardRoutes from './routes/dashboard.js';
 
 
 app.use('/login', loginRoutes);

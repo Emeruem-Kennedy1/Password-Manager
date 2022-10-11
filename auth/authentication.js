@@ -1,5 +1,8 @@
-const {fetch} = import('node-fetch');
+import fetch from 'node-fetch';
+import dotenv from 'dotenv';
+dotenv.config();
 const apiUrl = `${process.env.API_ENTRYPOINT}/${process.env.API_KEY}/users`;
+console.log(apiUrl);
 
 const findUsers = async () => {
     const response = await fetch(apiUrl);
@@ -12,4 +15,4 @@ const findUserDetails = async (emailID) => {
     return data;
 }
 
-module.exports = {findUsers, findUserDetails};
+export {findUsers, findUserDetails};
